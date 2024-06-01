@@ -159,11 +159,11 @@ $(TARGET_DIR)/main_clang_RELRO: $(SRC)
 
 # Fortify Source targets for GCC
 $(TARGET_DIR)/main_gcc_FORTIFY: $(SRC)
-	$(CC_GCC) $(CFLAGS) -D_FORTIFY_SOURCE=2 $(LDFLAGS_GCC) -o $@ $<
+	$(CC_GCC) $(CFLAGS) -D_FORTIFY_SOURCE=3 $(LDFLAGS_GCC) -o $@ $<
 
 # Fortify Source targets for Clang
 $(TARGET_DIR)/main_clang_FORTIFY: $(SRC)
-	$(CC_CLANG) $(CFLAGS) -D_FORTIFY_SOURCE=2 $(LDFLAGS_CLANG) -o $@ $<
+	$(CC_CLANG) $(CFLAGS) -D_FORTIFY_SOURCE=3 $(LDFLAGS_CLANG) -o $@ $<
 
 # Metrics calculation
 metrics: $(TARGET_DIR)
