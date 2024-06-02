@@ -18,14 +18,14 @@ all: check-clang check-gcc clang gcc
 check-clang:
 	@if ! command -v $(CC_CLANG) >/dev/null 2>&1; then \
 		echo "$(CC_CLANG) not found, installing..."; \
-		apt install -y clang llvm; \
+		sudo apt install -y clang llvm; \
 	fi
 
 # Check if GCC is installed
 check-gcc:
 	@if ! command -v $(CC_GCC) >/dev/null 2>&1; then \
 		echo "$(CC_GCC) not found, installing..."; \
-		apt install -y gcc; \
+		sudo apt install -y gcc; \
 	fi
 
 

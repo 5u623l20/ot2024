@@ -53,28 +53,28 @@ $(TARGET_DIR):
 check-clang:
 	@if ! command -v $(CC_CLANG) >/dev/null 2>&1; then \
 		echo "$(CC_CLANG) not found, installing..."; \
-		apt install -y clang llvm; \
+		sudo apt install -y clang llvm; \
 	fi
 
 # Check if ent is installed
 check-ent:
 	@if ! command -v $(ENT_BIN) >/dev/null 2>&1; then \
 		echo "$(ENT_BIN) not found, installing..."; \
-		apt install -y ent; \
+		sudo apt install -y ent; \
 	fi
 
 # Check if GCC is installed
 check-gcc:
 	@if ! command -v $(CC_GCC) >/dev/null 2>&1; then \
 		echo "$(CC_GCC) not found, installing..."; \
-		apt install -y gcc; \
+		sudo apt install -y gcc; \
 	fi
 
 # Check if valgrind is installed
 check-valgrind:
 	@if ! command -v $(VALGRIND_BIN) >/dev/null 2>&1; then \
 		echo "$(VALGRIND_BIN) not found, installing..."; \
-		apt install -y valgrind; \
+		sudo apt install -y valgrind; \
 	fi
 
 # Compile the external library
