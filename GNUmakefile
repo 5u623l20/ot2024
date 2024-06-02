@@ -12,7 +12,22 @@ TARGET_GCC := exploit_gcc
 TARGET_CLANG := exploit_clang
 
 # Default target
-all: gcc clang
+all: check-clang check-gcc clang gcc
+# Check if Clang is installed
+
+check-clang:
+	@if ! command -v $(CC_CLANG) >/dev/null 2>&1; then \
+		echo "$(CC_CLANG) not found, installing..."; \
+		apt install -y clang llvm; \
+	fi
+
+# Check if GCC is installed
+check-gcc:
+	@if ! command -v $(CC_GCC) >/dev/null 2>&1; then \
+		echo "$(CC_GCC) not found, installing..."; \
+		apt install -y gcc; \
+	fi
+
 
 # GCC compilation options
 gcc: gcc_o0 gcc_o1 gcc_o2 gcc_o3 gcc_os gcc_ofast gcc_lto gcc_pgo gcc_asan gcc_ubsan gcc_stack_protector gcc_aslr
