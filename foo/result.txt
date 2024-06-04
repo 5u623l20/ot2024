@@ -1,0 +1,31 @@
+|                 NAME |  SIZE | FUNCTIONS | JUMP |  ENTROPY | MEMORY | ASAN | CFI | FS | LSAN | LTO | MSAN | PIE | RRO | SP | SPS | TSAN | UBSAN | SCORE |
+|      main_clang_ASan |  1.4M |      1657 | 1110 | 6.237053 | 94 allocations, 94 frees |  5 |    0 |   0 |  0 |    0 |   0 |    8 |   6 |   0 |  0 |   0 |    4 |    32 |       |
+|       main_clang_CFI |   19K |         4 |   11 | 2.382239 |   2 allocations, 2 frees |  0 |    0 |   0 |  0 |    0 |   0 |    8 |   6 |   0 |  0 |   0 |    0 |    23 |       |
+|   main_clang_FORTIFY |   19K |         6 |   11 | 2.382659 |   2 allocations, 2 frees |  0 |    0 |   0 |  0 |    0 |   0 |    8 |   6 |   0 |  0 |   0 |    0 |    23 |       |
+|      main_clang_LSan |  426K |        77 |  161 | 6.123991 |   4 allocations, 4 frees |  0 |    0 |   0 |  3 |    0 |   0 |    8 |   6 |   0 |  0 |   0 |    0 |    26 |       |
+|       main_clang_LTO |   19K |         4 |   11 | 2.382239 |   2 allocations, 2 frees |  0 |    0 |   0 |  0 |    0 |   0 |    8 |   6 |   0 |  0 |   0 |    0 |    23 |       |
+|      main_clang_MSan |  1.1M |      1588 | 1171 | 6.225065 |                          |  0 |    0 |   0 |  0 |    0 |   7 |    8 |   6 |   0 |  0 |   0 |    4 |    34 |       |
+|        main_clang_O0 |   19K |         6 |   11 | 2.382659 |   2 allocations, 2 frees |  0 |    0 |   0 |  0 |    0 |   0 |    8 |   6 |   0 |  0 |   0 |    0 |    23 |       |
+|        main_clang_O1 |   20K |         6 |   13 | 2.481248 |   2 allocations, 2 frees |  0 |    0 |   0 |  0 |    0 |   0 |    8 |   6 |   0 |  0 |   0 |    0 |    23 |       |
+|        main_clang_O2 |   20K |         6 |   11 | 2.575165 |   1 allocations, 1 frees |  0 |    0 |   0 |  0 |    0 |   0 |    8 |   6 |   0 |  0 |   0 |    0 |    23 |       |
+|        main_clang_O3 |   20K |         6 |   11 | 2.575165 |   1 allocations, 1 frees |  0 |    0 |   0 |  0 |    0 |   0 |    8 |   6 |   0 |  0 |   0 |    0 |    23 |       |
+|       main_clang_PIE |   19K |         6 |   11 | 2.382659 |   2 allocations, 2 frees |  0 |    0 |   0 |  0 |    0 |   0 |    8 |   6 |   0 |  0 |   0 |    0 |    23 |       |
+|     main_clang_RELRO |   19K |         6 |   11 | 2.383922 |   2 allocations, 2 frees |  0 |    0 |   0 |  0 |    0 |   0 |    8 |   6 |   0 |  0 |   0 |    0 |    23 |       |
+|        main_clang_SP |   19K |         6 |   12 | 2.484509 |   2 allocations, 2 frees |  0 |    0 |   0 |  0 |    0 |   0 |    8 |   6 |   5 |  0 |   0 |    0 |    28 |       |
+| main_clang_SP_STRONG |   19K |         6 |   11 | 2.382659 |   2 allocations, 2 frees |  0 |    0 |   0 |  0 |    0 |   0 |    8 |   6 |   0 |  0 |   0 |    0 |    23 |       |
+|      main_clang_TSan |  1.4M |      1751 | 1132 | 6.183341 |                          |  0 |    0 |   0 |  0 |    0 |   0 |    8 |   6 |   0 |  0 |   6 |    4 |    33 |       |
+|     main_clang_UBSan |  389K |       340 |  144 | 6.066410 |   6 allocations, 6 frees |  0 |    0 |   0 |  0 |    0 |   0 |    8 |   6 |   0 |  0 |   0 |    4 |    27 |       |
+|        main_gcc_ASan |   28K |         6 |   20 | 3.940221 |   0 allocations, 0 frees |  5 |    0 |   0 |  0 |    0 |   0 |    8 |   6 |   0 |  0 |   0 |    0 |    28 |       |
+|     main_gcc_FORTIFY |   19K |         6 |   13 | 2.517107 |   2 allocations, 2 frees |  0 |    0 |   0 |  0 |    0 |   0 |    8 |   6 |   0 |  0 |   0 |    0 |    23 |       |
+|        main_gcc_LSan |   22K |         6 |   13 | 2.961970 |   4 allocations, 4 frees |  0 |    0 |   0 |  3 |    0 |   0 |    8 |   6 |   0 |  0 |   0 |    0 |    26 |       |
+|         main_gcc_LTO |   20K |         4 |   13 | 2.588371 |   2 allocations, 2 frees |  0 |    0 |   0 |  0 |    0 |   0 |    8 |   6 |   0 |  0 |   0 |    0 |    23 |       |
+|          main_gcc_O0 |   19K |         6 |   13 | 2.519422 |   2 allocations, 2 frees |  0 |    0 |   0 |  0 |    0 |   0 |    8 |   6 |   0 |  0 |   0 |    0 |    23 |       |
+|          main_gcc_O1 |   20K |         6 |   13 | 2.597499 |   2 allocations, 2 frees |  0 |    0 |   0 |  0 |    0 |   0 |    8 |   6 |   0 |  0 |   0 |    0 |    23 |       |
+|          main_gcc_O2 |   21K |         6 |   13 | 2.646209 |   2 allocations, 2 frees |  0 |    0 |   0 |  0 |    0 |   0 |    8 |   6 |   0 |  0 |   0 |    0 |    23 |       |
+|          main_gcc_O3 |   21K |         6 |   13 | 2.683057 |   2 allocations, 2 frees |  0 |    0 |   0 |  0 |    0 |   0 |    8 |   6 |   0 |  0 |   0 |    0 |    23 |       |
+|         main_gcc_PIE |   20K |         6 |   13 | 2.518988 |   2 allocations, 2 frees |  0 |    0 |   0 |  0 |    0 |   0 |    8 |   6 |   0 |  0 |   0 |    0 |    23 |       |
+|       main_gcc_RELRO |   19K |         6 |   13 | 2.521278 |   2 allocations, 2 frees |  0 |    0 |   0 |  0 |    0 |   0 |    8 |   6 |   0 |  0 |   0 |    0 |    23 |       |
+|          main_gcc_SP |   20K |         6 |   14 | 2.602342 |   2 allocations, 2 frees |  0 |    0 |   0 |  0 |    0 |   0 |    8 |   6 |   5 |  0 |   0 |    0 |    28 |       |
+|   main_gcc_SP_STRONG |   20K |         6 |   13 | 2.524293 |   2 allocations, 2 frees |  0 |    0 |   0 |  0 |    0 |   0 |    8 |   6 |   0 |  0 |   0 |    0 |    23 |       |
+|        main_gcc_TSan |   21K |         6 |   18 | 2.971914 |                          |  0 |    0 |   0 |  0 |    0 |   0 |    8 |   6 |   0 |  0 |   6 |    0 |    29 |       |
+|       main_gcc_UBSan |   20K |         6 |   17 | 2.937856 |   3 allocations, 3 frees |  0 |    0 |   0 |  0 |    0 |   0 |    8 |   6 |   0 |  0 |   0 |    4 |    27 |       |
